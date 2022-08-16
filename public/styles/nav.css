@@ -1,0 +1,48 @@
+/* CSS for the navigation section */
+
+nav {
+  font-family: 'Bungee', Sans-Serif;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+}
+
+nav div {
+  font-family: 'Source Sans Pro', Sans-Serif;
+}
+
+.logo {
+  font-family: 'Bungee', Sans-Serif;
+  margin-top: 50px;
+  margin-left: 1.5em;
+  font-size: 35px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.write-new-tweet {
+  margin-right: 1.5em;
+}
+
+.write {
+  font-weight: bold;
+}
+
+.fa-angle-double-down {
+  color: red;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-right: 1.5em;
+}
