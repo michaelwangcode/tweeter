@@ -35,3 +35,7 @@
   background-color: transparent;
   font-family: 'Bungee';
 }
+
+.tweet-counter-red {
+  color: red;
+}

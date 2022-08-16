@@ -15,11 +15,11 @@ $(document).ready(function() {
     // Set the character counter to the number of characters left
     $('#character-counter').val(charactersLeft);
 
-    // Change the text color based on the number of characters
+    // Change the text color based on the number of characters by calling the new-tweet.css file
     if (charactersLeft < 0) {
-      $('#character-counter').css("color", "red");
+      $('#character-counter').addClass("tweet-counter-red");
     } else {
-      $('#character-counter').css("color", "#545149");
+      $('#character-counter').removeClass("tweet-counter-red");
     }
   });
   
