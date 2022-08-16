@@ -25,7 +25,7 @@ nav div {
   justify-content: space-between;
 }
 
-.new-tweet {
+.new-tweet-top-right {
   display: flex;
   flex-direction: column;
   margin-top: 50px;

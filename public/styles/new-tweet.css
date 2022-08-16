@@ -1,0 +1,37 @@
+/* CSS for the new tweet section */
+
+.new-tweet {
+  background-color: transparent;
+}
+
+.compose-tweet {
+  font-weight: 600;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+ }
+
+.tweet-box {
+  background-color: transparent;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 4px solid #545149;
+  outline: none;
+ }
+
+.tweet-button {
+  color: white;
+  background-color: #4056A1;
+  border: 2px solid #4056A1;
+}
+ 
+.tweet-button-and-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: transparent;
+  font-family: 'Bungee';
+}
