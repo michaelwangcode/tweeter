@@ -21,12 +21,16 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <script>
+
+    </script>
   </head>
 
   <body>
@@ -67,7 +71,7 @@
           </div>
           <div class="tweet-button-and-counter">
             <button class ="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id="character-counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
 
