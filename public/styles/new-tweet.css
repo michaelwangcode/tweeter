@@ -2,13 +2,14 @@
 
 .new-tweet {
   background-color: transparent;
+  margin-bottom: 40px;
 }
 
 .compose-tweet {
   font-weight: 600;
   background-color: transparent;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 20px;
  }
 
@@ -38,4 +39,87 @@
 
 .tweet-counter-red {
   color: red;
+}
+
+
+/* CSS for a tweet being displayed */
+
+
+.tweets-container {
+  margin-bottom: 100px;
+}
+
+.tweet {
+  background-color: transparent;
+  border: 4px solid #545149;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px 0px rgba(30,30,70, .3); 
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.picture-and-name {
+  display: flex;
+}
+
+.profile-picture-small {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.display-name {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.username {
+  color: gray;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.tweet-body {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.timestamp-and-buttons {
+  display: flex;
+  justify-content: space-between;
+  border-top: 4px solid #545149;
+  padding-top: 10px;
+}
+
+.timestamp {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.buttons {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.fa-solid:hover {
+  color: goldenrod;
 }
