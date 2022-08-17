@@ -68,4 +68,25 @@ $(document).ready(function() {
   
   // Render the tweets onto the index.html page
   renderTweets(data);
+
+
+  // Actions performed when the submit tweet button is clicked
+  $('#submit-tweet-form').submit(function(event){
+
+    // Prevent default behavior from occuring (refresh/redirect)
+    event.preventDefault() 
+
+    // Serialize the data in the tweet text area
+    serializedData = $('#tweet-text').serialize();
+
+    // Testing: show alert with text
+    alert(serializedData);
+
+    // Submit a POST request that sends the serialized data to the server
+    $.post("/tweets/", serializedData).done(function() {
+      console.log(serializedData);
+    });
+  });
+
+
 });
