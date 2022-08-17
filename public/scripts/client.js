@@ -3,32 +3,7 @@
 // Document ready (jQuery)
 $(document).ready(function() {
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-
+  
   // This function converts a tweet object into HTML
   const createTweetElement = function(tweet) {
 
@@ -57,17 +32,32 @@ $(document).ready(function() {
   // This function takes an array of tweets and adds them to the tweets-container
   const renderTweets = function(tweets) {
 
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+    // Loops through the array of tweets
     for (let tweet of tweets) {
+
+      // Create a tweet element in HTML
       let $tweet = createTweetElement(tweet);
+
+      // Append the tweet element to the tweets container
       $('#tweets-container').append($tweet);
     }
   }
   
-  // Render the tweets onto the index.html page
-  renderTweets(data);
+
+  // This function gets all of the tweets from /tweets/ and renders them
+  const loadTweets = function() {
+
+    // Get the tweets from the /tweets/ page
+    $.ajax('/tweets/', { method: 'GET' }).then(function (allTweets) {
+
+      // Call the render function from above to display the tweets on index.html
+      renderTweets(allTweets);
+    });
+  }
+
+
+  // Load all of the tweets from the /tweets/ page
+  loadTweets();
 
 
   // Actions performed when the submit tweet button is clicked
