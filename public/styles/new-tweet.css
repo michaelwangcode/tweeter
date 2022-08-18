@@ -37,6 +37,26 @@
   font-family: 'Bungee';
 }
 
+.tweet-button-and-status-message {
+  display: flex;
+  flex-direction: row;
+}
+
+.status-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Source Sans Pro', Sans-Serif;
+  color: limegreen;
+  font-size: 23px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.status-message-red {
+  color: red;
+}
+
 .tweet-counter-red {
   color: red;
 }

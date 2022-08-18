@@ -71,7 +71,10 @@
             <textarea class="tweet-box" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           </div>
           <div class="tweet-button-and-counter">
-            <button class ="tweet-button" type="submit">Tweet</button>
+            <div class="tweet-button-and-status-message">
+              <button class ="tweet-button" type="submit">Tweet</button>
+              <output class="status-message" id="status-message"></output>
+            </div>
             <output name="counter" id="character-counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
