@@ -69,11 +69,23 @@ $(document).ready(function() {
     // Prevent default behavior from occuring (refresh/redirect)
     event.preventDefault() 
 
+    // Store the text of the tweet
+    let tweetText = $('#tweet-text').val();
+
+    // If the tweet is blank or over 140 characters, display an error message
+    if (tweetText === "" || tweetText === null) {
+      alert("Tweet cannot be blank");
+      return;
+    } else if (tweetText.length > 140) {
+      alert("Tweet must be less than 140 characters");
+      return;
+    }
+
     // Serialize the data in the tweet text area
     serializedData = $('#tweet-text').serialize();
 
-    // Testing: show alert with text
-    alert(serializedData);
+    // Clear the text field
+    $('#tweet-text').val('');
 
     // Submit a POST request that sends the serialized data to the server
     $.post("/tweets/", serializedData).done(function() {
