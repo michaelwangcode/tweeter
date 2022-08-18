@@ -32,11 +32,14 @@ $(document).ready(function() {
   // This function takes an array of tweets and adds them to the tweets-container
   const renderTweets = function(tweets) {
 
-    // Loops through the array of tweets
-    for (let tweet of tweets) {
+    // Remove all of the previous tweets before loading
+    $('#tweets-container').empty();
+    
+    // Loop through the array of tweets in reverse order
+    for (let i = tweets.length -1; i >= 0; i--) {
 
       // Create a tweet element in HTML
-      let $tweet = createTweetElement(tweet);
+      let $tweet = createTweetElement(tweets[i]);
 
       // Append the tweet element to the tweets container
       $('#tweets-container').append($tweet);
@@ -74,7 +77,9 @@ $(document).ready(function() {
 
     // Submit a POST request that sends the serialized data to the server
     $.post("/tweets/", serializedData).done(function() {
-      console.log(serializedData);
+
+      // Load the tweets
+      loadTweets();
     });
   });
 
