@@ -3,8 +3,8 @@
 nav {
   font-family: 'Bungee', Sans-Serif;
   height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: transparent;
+  color: white;
   position: fixed;
   width: 100%;
 }
@@ -45,4 +45,15 @@ nav div {
   display: flex;
   justify-content: center;
   margin-right: 1.5em;
+}
+
+
+/* Desktop Styles */
+
+/* Styles applied when width is greater than 1024 pixels: */
+@media only screen and (min-width: 1024px) {
+  
+  nav {
+    background-color: #4056A1;
+  }
 }
