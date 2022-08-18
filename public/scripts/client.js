@@ -3,6 +3,12 @@
 // Document ready (jQuery)
 $(document).ready(function() {
 
+  // Escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   // This function converts a tweet object into HTML
   const createTweetElement = function(tweet) {
@@ -17,7 +23,7 @@ $(document).ready(function() {
           <span class="username">${tweet.user.handle}</span>
         </div>
         <div class="tweet-body">
-          <span class="tweet-text">${tweet.content.text}</span>
+          <span class="tweet-text">${escape(tweet.content.text)}</span>
         </div>
         <div class="timestamp-and-buttons">
           <span class="timestamp">${timeago.format(tweet.created_at)}</span>
