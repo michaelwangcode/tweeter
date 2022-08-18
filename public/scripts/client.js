@@ -3,7 +3,7 @@
 // Document ready (jQuery)
 $(document).ready(function() {
 
-  
+
   // This function converts a tweet object into HTML
   const createTweetElement = function(tweet) {
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
           <span class="tweet-text">${tweet.content.text}</span>
         </div>
         <div class="timestamp-and-buttons">
-          <span class="timestamp">${tweet.created_at}</span>
+          <span class="timestamp">${timeago.format(tweet.created_at)}</span>
           <span class="buttons"><i class="fa-solid fa-flag"></i> <i class="fa-solid fa-retweet"></i> <i class="fa-solid fa-heart"></i></span>
         </div>
       </div>`);
