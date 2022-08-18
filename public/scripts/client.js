@@ -4,7 +4,7 @@
 $(document).ready(function() {
 
   // Escape function
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -32,7 +32,7 @@ $(document).ready(function() {
       </div>`);
     
     return $tweet;
-  }
+  };
 
   
   // This function takes an array of tweets and adds them to the tweets-container
@@ -42,7 +42,7 @@ $(document).ready(function() {
     $('#tweets-container').empty();
     
     // Loop through the array of tweets in reverse order
-    for (let i = tweets.length -1; i >= 0; i--) {
+    for (let i = tweets.length - 1; i >= 0; i--) {
 
       // Create a tweet element in HTML
       let $tweet = createTweetElement(tweets[i]);
@@ -50,19 +50,19 @@ $(document).ready(function() {
       // Append the tweet element to the tweets container
       $('#tweets-container').append($tweet);
     }
-  }
+  };
   
 
   // This function gets all of the tweets from /tweets/ and renders them
   const loadTweets = function() {
 
     // Get the tweets from the /tweets/ page
-    $.ajax('/tweets/', { method: 'GET' }).then(function (allTweets) {
+    $.ajax('/tweets/', { method: 'GET' }).then(function(allTweets) {
 
       // Call the render function from above to display the tweets on index.html
       renderTweets(allTweets);
     });
-  }
+  };
 
 
   // Load all of the tweets from the /tweets/ page
@@ -70,10 +70,10 @@ $(document).ready(function() {
 
 
   // Actions performed when the submit tweet button is clicked
-  $('#submit-tweet-form').submit(function(event){
+  $('#submit-tweet-form').submit(function(event) {
 
     // Prevent default behavior from occuring (refresh/redirect)
-    event.preventDefault() 
+    event.preventDefault();
 
     // Store the text of the tweet
     let tweetText = $('#tweet-text').val();
@@ -94,7 +94,7 @@ $(document).ready(function() {
     $('#status-message').text("Tweet posted!");
 
     // Serialize the data in the tweet text area
-    serializedData = $('#tweet-text').serialize();
+    let serializedData = $('#tweet-text').serialize();
 
     // Clear the text field
     $('#tweet-text').val('');
