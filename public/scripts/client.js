@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* Loading tweets */
 
 // Document ready (jQuery)

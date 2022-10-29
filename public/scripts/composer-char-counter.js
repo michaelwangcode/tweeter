@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* Character counter */
 
 // Document ready (jQuery)
